@@ -2,9 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="css/main.css" rel="stylesheet"/>
     </head>
     <body>
-        <p>Welcome to the Chat App</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading text-center">Welcome to the chat App</div>
+                        <div class="panel-body">
+                            <div>
+                                <div id="messages">
+
+                                </div>
+                            </div>
+                        </div>
+                        <form class="form-inline"  id="message-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="message" placeholder="Enter your message..">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn width btn-success">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+        </div>
         <script src="/socket.io/socket.io.js"></script>
         <script src="/js/index.js"></script>
     </body>
