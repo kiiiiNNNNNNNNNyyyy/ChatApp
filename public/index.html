@@ -7,32 +7,22 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="css/main.css" rel="stylesheet"/>
     </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading text-center">Welcome to the chat App</div>
-                        <div class="panel-body">
-                            <div>
-                                <div id="messages">
+    <body class="chat">
 
-                                </div>
-                            </div>
-                        </div>
-                        <form class="form-inline"  id="message-form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" name="message" placeholder="Enter your message..">
-                                </div>
-                            </div>
-                            <button type="submit" id="send-message" class="btn width btn-success">Send</button>
-                            <button class="btn width btn-primary" id="send-location">Locate</button>
-                        </form>
-                    </div>
+            <div class="chat__sidebar">
+                <h3>People</h3>
+                <div id="users"></div>
+            </div>
+            <div class="chat__main">
+                <ol id="messages" class="chat__messages"></ol>
+                <div class="chat__footer">
+                    <form id="message-form">
+                        <input name="message" type="text" placeholder="Message" autofocus autocomplete="off " />
+                        <button>Send</button>
+                    </form>
+                    <button id="send-location">Send Location</button>
                 </div>
-            </div>    
-        </div>
+            </div>
         <script src="/socket.io/socket.io.js"></script>
         <script src="/js/index.js"></script>
     </body>
