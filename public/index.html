@@ -5,7 +5,6 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="/js/moment.js"></script>
         <link href="css/main.css" rel="stylesheet"/>
     </head>
     <body class="chat">
@@ -24,7 +23,13 @@
                     <button id="send-location">Send Location</button>
                 </div>
             </div>
+
+        <script id="message-template" type="text/template">
+            <p>This is a template </p>  
+        </script>
         <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/moment.js"></script>
+        <script src="/js/mustache.js"></script>
         <script src="/js/index.js"></script>
     </body>
 </html>
